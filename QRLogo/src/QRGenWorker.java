@@ -41,7 +41,7 @@ public class QRGenWorker extends SwingWorker<QRResult, QRResult> {
 			BitMatrix matrix = writer.encode(text,
 					BarcodeFormat.QR_CODE,
 					dim, dim);
-
+			
 
 			System.out.println("Publishing...");
 			publish(new QRResult(matrix, pattern));
